@@ -6,16 +6,16 @@ error_reporting(E_ALL);
 
 require_once 'OAuth.php';
 
-define('CONTEXT_KEY', 'your-contextio-consumer-key');
-define('CONTEXT_SECRET', 'your-contextio-consumer-secret');
-define('CONTEXT_USER_ID', 'your-contextio-user-id');
+define('CONTEXT_KEY', 'j4g3odnq');
+define('CONTEXT_SECRET', 'k9J6V47ClJCBlthS');
+define('CONTEXT_USER_ID', 'mailrouteblacklist');
 define('CONTEXT_TRASH_NAME', '[Gmail]/Trash'); // change if not using Gmail
 
-define('MAILROUTE_USER', 'your-mailroute-username'); // should be your email address
-define('MAILROUTE_API_KEY', 'your-mailroute-api-key');
+define('MAILROUTE_USER', 'bhundt@bradcad.com'); // should be your email address
+define('MAILROUTE_API_KEY', '11a5c826e73f9d07289b1675d314b811ad692c2c');
 define('MAILROUTE_EMAIL_ACCOUNT_ID', 'your-mailroute-email-id'); // numeric - can be found in admin.mailroute.net network traffic
 
-$whitelist = ['sending@example.com']; // add the email address you are forwarding from or you'll blacklist yourself...
+$whitelist = ['bhundt@bradcad.com']; // add the email address you are forwarding from or you'll blacklist yourself...
 
 $inbox = performOAuthRequest('GET', 'https://api.context.io/lite/users/'.CONTEXT_USER_ID.'/email_accounts/0/folders/inbox/messages');
 foreach ($inbox as $message) {
